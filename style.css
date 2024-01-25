@@ -1,0 +1,129 @@
+/* Variables */
+:root {
+  --Light-blue-light-blue-100: #f3f5fc;
+  --Gray-gray-400: #49505;
+  --Dark-blue-dark-blue-300: #0a3871;
+  --bg-button: #d8dfe8;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  width: auto;
+  height: 100vh;
+  background: var(--Light-blue-light-blue-100);
+  display: flex;
+  flex-direction: column;
+  padding: 20px 80px;
+  font-family: "Montserrat", sans-serif;
+}
+
+main {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 28px;
+}
+
+.first-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 32px;
+  padding: 32px;
+}
+
+#textInput {
+  width: 100%;
+  height: auto;
+  border: none;
+  border-radius: 5px;
+  font-size: 32px;
+  font-family: "Inter", sans-serif;
+  font-weight: 400;
+  color: #000;
+  background-color: transparent;
+  resize: none;
+  outline: none;
+}
+
+.textInfo {
+  color: #495057;
+  width: 100%;
+  text-align: left;
+  font-size: 12px;
+  font-family: "Inter", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 150%; /* 18px */
+}
+
+.btns {
+  display: flex;
+  width: 680px;
+  align-items: flex-start;
+  gap: 24px;
+}
+
+.btns button {
+  width: 328px;
+  padding: 24px;
+  flex-shrink: 0;
+  border-radius: 24px;
+  cursor: pointer;
+}
+
+#btnEncrypt {
+  color: #fff;
+  background: var(--Dark-blue-dark-blue-300);
+  border: 1px solid var(--Dark-blue-dark-blue-300);
+}
+
+#btnDesencriptar {
+  color: var(--Dark-blue-dark-blue-300);
+  background: var(--bg-button);
+  border: 1px solid var(--Dark-blue-dark-blue-300);
+}
+
+/* Segunda sección */
+.second-section {
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 24px;
+  border-radius: 32px;
+  padding: 32px;
+}
+
+#textOutput {
+  width: 336px;
+  height: 70vh;
+  flex-shrink: 0;
+  padding: 20px;
+  border: none;
+  border-radius: 32px;
+  font-size: 24px;
+  font-family: "Inter", sans-serif;
+  font-weight: 400;
+  color: #495057;
+  background: #fff;
+  resize: none;
+  outline: none;
+  pointer-events: none;
+}
+
+#btnCopy {
+  width: 328px;
+  padding: 24px;
+  flex-shrink: 0;
+  border-radius: 24px;
+  cursor: pointer;
+  color: var(dark-blue-dark-blue-300);
+  background: #fff;
+  border: 1px solid var(--Dark-blue-dark-blue-300);
+}

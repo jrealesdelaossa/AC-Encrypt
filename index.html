@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Alura Challenge 1 | Encriptador</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+  </head>
+  <body>
+    <header>
+      <h1>Encriptador</h1>
+    </header>
+    <main>
+      <div class="first-section">
+        <textarea
+          name="textInput"
+          id="textInput"
+          cols="30"
+          rows="10"
+          id="textInput"
+          placeholder="Ingrese su texto aquí"
+        ></textarea>
+        <span class="textInfo"
+          ><i class="fa-solid fa-circle-info"></i> Solo letras minúsculas y sin
+          acentos</span
+        >
+        <div class="btns">
+          <button id="btnEncrypt">Encrypt</button>
+          <button id="btnDecrypt">Decrypt</button>
+        </div>
+      </div>
+
+      <div class="second-section">
+        <textarea
+          class="textOutput"
+          name="textOutput"
+          id="textOutput"
+          cols="30"
+          rows="10"
+        ></textarea>
+        <button id="btnCopy">Copy</button>
+      </div>
+    </main>
+    <footer></footer>
+    <script src="script.js"></script>
+  </body>
+</html>
