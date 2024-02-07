@@ -5,7 +5,25 @@ const textInput = document.getElementById("textInput");
 const textOutput = document.getElementById("textOutput");
 const btnCopy = document.getElementById("btnCopy");
 
+const imgSection = document.getElementsByClassName("img-second-section");
+const textSection = document.getElementsByClassName("text-output-section");
+textSection[0].classList.add("hidden");
+
 // Functions
+/**
+ * Validate text input
+ * Remove accents and special characters
+ * Convert to lowercase
+ */
+function validateTextInput() {
+  let textInput = document.getElementById("textInput");
+  textInput.value = textInput.value
+    .normalize("NFD")
+    .replace(/[\u0300-\u036f]/g, "")
+    .replace(/[^a-z0-9 ]/gi, "")
+    .toLowerCase();
+}
+
 function encrypt() {
   // get text in textInput
   let text = textInput.value;
@@ -17,6 +35,10 @@ function encrypt() {
     cipherText = cifrarTexto(text);
     console.log("Encrypting... " + cipherText);
     textOutput.value = cipherText;
+    // agregar la clase hidden a la sección de imágenes
+    imgSection[0].classList.add("hidden");
+    // remover la clase hidden a la sección de texto
+    textSection[0].classList.remove("hidden");
   }
 }
 
@@ -30,6 +52,10 @@ function decrypt() {
     cipherText = descifrarTexto(text);
     console.log("Decrypting... " + cipherText);
     textOutput.value = cipherText;
+    // agregar la clase hidden a la sección de imágenes
+    imgSection[0].classList.add("hidden");
+    // remover la clase hidden a la sección de texto
+    textSection[0].classList.remove("hidden");
   }
 }
 
@@ -71,6 +97,10 @@ function descifrarTexto(textoCifrado) {
 function copyText() {
   textInput.value = textOutput.value;
   textOutput.value = "";
+  // agregar la clase hidden a la sección de imágenes
+  imgSection[0].classList.remove("hidden");
+  // remover la clase hidden a la sección de texto
+  textSection[0].classList.add("hidden");
 }
 
 // Event Listeners
